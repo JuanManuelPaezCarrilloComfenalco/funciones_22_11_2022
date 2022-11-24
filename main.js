@@ -1,17 +1,21 @@
 addEventListener("DOMContentLoaded", (e)=>{
 
-//Funciones autoejecutables: sólo tenemos que envolver entre paréntesis la función anónima 
-//en cuestión (no necesitamos que tenga nombre, puesto que no la vamos a guardar) y luego, 
-// ejecutarla:
+// Clasulas: una clausura o cierre se define como una función que «encierra» variables en su
+// propio ámbito(y que continúan existiendo aún habiendo terminado la función).
+// Ejemplo:
 
-// Función autoejecutable
-(function () {
-  console.log("Hola!!");
+// Clausura: Función incr()
+const incr = (function () {
+  let num = 0;
+  return function () {
+    num++;
+    return num;
+  };
 })();
 
-// Función autoejecutable con parámetros
-(function (name) {
-  console.log(`¡Hola, ${name}!`);
-})("Manz");
+typeof incr; // 'function'
+incr(); // 1
+incr(); // 2
+incr(); // 3
 })
 // 
