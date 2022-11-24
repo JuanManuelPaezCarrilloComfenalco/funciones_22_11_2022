@@ -1,15 +1,17 @@
 addEventListener("DOMContentLoaded", (e)=>{
 
-// Funiones anonimas o funciones lambda son un tipo de funciones que se declaran sin nombre 
-// de función y se alojan en el interior de una variable y haciendo referencia a ella cada vez
-//  que queramos utilizarla:
+//Funciones autoejecutables: sólo tenemos que envolver entre paréntesis la función anónima 
+//en cuestión (no necesitamos que tenga nombre, puesto que no la vamos a guardar) y luego, 
+// ejecutarla:
 
-// Función anónima "saludo"
-const saludo = function () {
-  return "Hola";
-};
+// Función autoejecutable
+(function () {
+  console.log("Hola!!");
+})();
 
-saludo; // ƒ () { return 'Hola'; }
-saludo(); // 'Hola'
+// Función autoejecutable con parámetros
+(function (name) {
+  console.log(`¡Hola, ${name}!`);
+})("Manz");
 })
 // 
