@@ -1,11 +1,11 @@
 addEventListener("DOMContentLoaded", (e)=>{
-    // consiste en crear funciones en el interior de una variable
-    // Ejemplo: El segundo "saludar" (nombre de la función) se suele omitir: es redundante
+
+    // Funciones como objetos
+    //  se pueden declarar funciones como si fueran objetos. 
+    // Sin embargo, es un enfoque que no se suele utilizar en producción.
+    // Ejemplo:
     
-const saludo = function saludar() {
-    return "Hola";
-  };
-  
-  saludo(); // 'Hola'
-    
+    const saludar = new Function("return 'Hola';");
+
+saludar(); // 'Hola'
 })
